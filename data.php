@@ -30,6 +30,7 @@ if ($result->num_rows > 0) {
 
 $conn->close();
 ?>
+<H1>Latest images</H1>     
 <?php
 $images = glob('pictures/*.jpg', GLOB_BRACE); //formats to look for
 $images = array_combine(array_map("filemtime", $images), $images);
