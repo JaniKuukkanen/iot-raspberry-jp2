@@ -22,7 +22,7 @@ while True:
 		print("PANIC!!!" + time.strftime("%Y-%m-%d %H:%M:%S"))
 		time.sleep(5)
 		os.system("fswebcam -r 1280x720 /home/pi/pictures/test"+ time.strftime("%Y-%m-%d_%H:%M:%S") + ".jpg" )
-		os.system("scp -i /home/pi/.ssh/id_rsa -r /home/pi/pictures/*.jpg projekti@10.207.5.78:/home/projekti/pictures/")
+		os.system("scp -i /home/pi/.ssh/id_rsa -r /home/pi/pictures/*.jpg projekti@10.207.5.78:/home/projekti/public_html/pictures/")
 		time.sleep(5)
 		os.system("sudo rm /home/pi/pictures/*.jpg")	
 
